@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "jsx": "react-jsx", // Sử dụng JSX transform mới
+
+    /* Bundler mode */
+    "moduleResolution": "bundler", // Hoặc "node"
+    "allowImportingTsExtensions": true, // Cho phép import file .ts/.tsx mà không cần đuôi file (esbuild sẽ xử lý)
+    "resolveJsonModule": true,
+    "isolatedModules": true, // Yêu cầu mỗi file là một module riêng biệt
+    // "noEmit": true, // esbuild sẽ đảm nhiệm việc emit file, không phải tsc
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true, // Cho phép default imports từ commonjs modules
+    "allowSyntheticDefaultImports": true, // Cho phép import React from 'react'
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["./**/*.ts", "./**/*.tsx", "esbuild.config.js"], // Bao gồm tất cả các file .ts và .tsx trong dự án
+  "exclude": ["node_modules", "dist"] // Loại trừ thư mục node_modules và dist
+}

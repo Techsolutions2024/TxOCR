@@ -1,0 +1,20 @@
+{
+  "name": "tx-ocr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.js && cp index.html dist/ && cp metadata.json dist/",
+    "vercel-build": "npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "typescript": "^5.4.5",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0"
+  },
+  "dependencies": {
+    "@google/genai": "^1.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
